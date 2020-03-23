@@ -9,6 +9,27 @@
         <br /><br />
         <asp:Label ID="MessageLabel" runat="server" ></asp:Label>
         <br />
+
+        <%--For coach, assistant coach, wins and losses--%>
+        <div class="row">
+            <div class="col-md-12">
+                <asp:Label runat="server" Text="Coach:"></asp:Label>&nbsp;&nbsp;
+                <asp:Label ID="Coach" runat="server"></asp:Label>
+            </div>
+            <div class="col-md-12">
+                <asp:Label runat="server" Text="Assistant Coach:"></asp:Label>&nbsp;&nbsp;
+                <asp:Label ID="AssistantCoach" runat="server"></asp:Label>
+            </div>
+            <div class="col-md-12">
+                <asp:Label runat="server" Text="Wins:"></asp:Label>&nbsp;&nbsp;
+                <asp:Label ID="Wins" runat="server"></asp:Label>
+            </div>
+            <div class="col-md-12">
+                <asp:Label runat="server" Text="Losses:"></asp:Label>&nbsp;&nbsp;
+                <asp:Label ID="Losses" runat="server"></asp:Label>
+            </div>
+        </div>
+
         <asp:GridView ID="List02" runat="server" 
             AutoGenerateColumns="False"
              CssClass="table table-striped" GridLines="Horizontal"
@@ -16,7 +37,7 @@
 
             <Columns>
                 <%--<asp:CommandField SelectText="View" ShowSelectButton="True" 
-                    ButtonType="Button" CausesValidation="false"></asp:CommandField>--%>
+                    ButtonType="Button" CausesValidation="false"></asp:CommandField>
 
                 <%--Player Name--%>
                 <asp:TemplateField HeaderText="Name">

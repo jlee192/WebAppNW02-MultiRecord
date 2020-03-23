@@ -44,6 +44,11 @@ namespace WebApp.ExercisePages
             if (List01.SelectedIndex == 0)
             {
                 MessageLabel.Text = "Select a team to view details";
+                // clear details
+                //Coach.Text = "";
+                //AssistantCoach.Text = "";
+                //Wins.Text = "";
+                //Losses.Text = "";
             }
             else
             {
@@ -55,6 +60,11 @@ namespace WebApp.ExercisePages
                     info.Sort((x, y) => x.PlayerName.CompareTo(y.PlayerName));
                     List02.DataSource = info;
                     List02.DataBind();
+                    //Coach.Text = "";
+                    //AssistantCoach.Text = "";
+                    //Wins.Text = "";
+                    //Losses.Text = "";
+                    
                 }
                 catch (Exception ex)
                 {
