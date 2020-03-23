@@ -2,7 +2,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
         <h1> Multi Record Query with Custom GridView</h1>
     <div class="offset-2">
-        <asp:Label ID="Label1" runat="server" Text="Select an Item: "></asp:Label>&nbsp;&nbsp;   
+        <asp:Label ID="Label1" runat="server" Text="Select a team: "></asp:Label>&nbsp;&nbsp;   
         <asp:DropDownList ID="List01" runat="server"></asp:DropDownList>&nbsp;&nbsp;
         <asp:Button ID="Fetch" runat="server" Text="Fetch" 
              CausesValidation="false" OnClick="Fetch_Click"/>
