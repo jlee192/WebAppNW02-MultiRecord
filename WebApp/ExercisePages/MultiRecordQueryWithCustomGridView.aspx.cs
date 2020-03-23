@@ -27,10 +27,10 @@ namespace WebApp.ExercisePages
                 Controller01 sysmgr = new Controller01();
                 List<Entity01> info = null;
                 info = sysmgr.List();
-                info.Sort((x, y) => x.CategoryName.CompareTo(y.CategoryName));
+                info.Sort((x, y) => x.TeamName.CompareTo(y.TeamName));
                 List01.DataSource = info;
-                List01.DataTextField = nameof(Entity01.CategoryName);
-                List01.DataValueField = nameof(Entity01.CategoryID);
+                List01.DataTextField = nameof(Entity01.TeamName);
+                List01.DataValueField = nameof(Entity01.TeamID);
                 List01.DataBind();
                 List01.Items.Insert(0, "select...");
             }
@@ -43,7 +43,7 @@ namespace WebApp.ExercisePages
         {
             if (List01.SelectedIndex == 0)
             {
-                MessageLabel.Text = "Select a category to view its products";
+                MessageLabel.Text = "Select a team to view details";
             }
             else
             {
@@ -52,7 +52,7 @@ namespace WebApp.ExercisePages
                     Controller02 sysmgr = new Controller02();
                     List<Entity02> info = null;
                     info = sysmgr.FindByID(int.Parse(List01.SelectedValue));
-                    info.Sort((x, y) => x.ProductName.CompareTo(y.ProductName));
+                    info.Sort((x, y) => x.PlayerName.CompareTo(y.PlayerName));
                     List02.DataSource = info;
                     List02.DataBind();
                 }
@@ -70,8 +70,8 @@ namespace WebApp.ExercisePages
         protected void List02_SelectedIndexChanged(object sender, EventArgs e)
         {
             GridViewRow agvrow = List02.Rows[List02.SelectedIndex];
-            string productid = (agvrow.FindControl("ProductID") as Label).Text;
-            Response.Redirect("ReceivingPage.aspx?pid=" + productid);
+            string playerid = (agvrow.FindControl("PlayerID") as Label).Text;
+            Response.Redirect("ReceivingPage.aspx?pid=" + playerid);
         }
     }
 }

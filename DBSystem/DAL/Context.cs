@@ -11,7 +11,7 @@ namespace DBSystem.DAL
 {
     internal class Context : DbContext
     {
-        public Context() : base("NWDB")
+        public Context() : base("FSIS_db")
         {
 
         }

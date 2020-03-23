@@ -17,7 +17,7 @@ namespace DBSystem.BLL
             using (var context = new Context())
             {
                 IEnumerable<Entity02> results =
-                    context.Database.SqlQuery<Entity02>("Products_GetByCategories @ID"
+                    context.Database.SqlQuery<Entity02>("Player_GetByTeam @ID"
                         , new SqlParameter("ID", id));
                 return results.ToList();
             }

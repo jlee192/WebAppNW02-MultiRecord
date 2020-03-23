@@ -9,14 +9,15 @@ using System.ComponentModel.DataAnnotations;
 
 namespace DBSystem.ENTITIES
 {
-    [Table("Categories")]
+    [Table("Team")]
     public class Entity01
     {
         [Key]
-        public int CategoryID { get; set; }
-        public string CategoryName { get; set; }
-        public string Description { get; set; }
-        //public byte[] Picture { get; set; }
-        //public string PictureMimeType { get; set; }
+        public int TeamID { get; set; }
+        public string TeamName { get; set; }
+        public string Coach { get; set; }
+        public string AssistantCoach { get; set; }
+        public int? Wins { get; set; }
+        public int? Losses { get; set; }
     }
 }
