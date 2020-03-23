@@ -43,7 +43,7 @@ namespace WebApp.ExercisePages
         {
             if (List01.SelectedIndex == 0)
             {
-                MessageLabel.Text = "Select a category to view its products";
+                MessageLabel.Text = "Select a team to view details";
             }
             else
             {
