@@ -19,5 +19,22 @@ namespace DBSystem.BLL
                 return context.Entity01s.ToList();
             }
         }
+        //public List<Entity01> TeamGet(int id)
+        //{
+        //    using (var context = new Context())
+        //    {
+        //        IEnumerable<Entity01> results =
+        //            context.Database.SqlQuery<Entity01>("Team_Get @ID"
+        //                , new SqlParameter("ID", id));
+        //        return results.ToList();
+        //    }
+        //}
+        public Entity01 TeamGet(int teamid)
+        {
+            using (var context = new Context())
+            {
+                return context.Entity01s.Find(teamid);
+            }
+        }
     }
 }

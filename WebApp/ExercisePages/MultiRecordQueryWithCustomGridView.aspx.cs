@@ -44,11 +44,11 @@ namespace WebApp.ExercisePages
             if (List01.SelectedIndex == 0)
             {
                 MessageLabel.Text = "Select a team to view details";
-                // clear details
-                //Coach.Text = "";
-                //AssistantCoach.Text = "";
-                //Wins.Text = "";
-                //Losses.Text = "";
+                //clear details
+                Coach.Text = "";
+                AssistantCoach.Text = "";
+                Wins.Text = "";
+                Losses.Text = "";
             }
             else
             {
@@ -60,11 +60,14 @@ namespace WebApp.ExercisePages
                     info.Sort((x, y) => x.PlayerName.CompareTo(y.PlayerName));
                     List02.DataSource = info;
                     List02.DataBind();
-                    //Coach.Text = "";
-                    //AssistantCoach.Text = "";
-                    //Wins.Text = "";
-                    //Losses.Text = "";
-                    
+                    // Team info
+                    Controller01 teamController = new Controller01();
+                    Entity01 teamInfo = null;
+                    teamInfo = teamController.TeamGet(int.Parse(List01.SelectedValue));
+                    Coach.Text = teamInfo.Coach;
+                    AssistantCoach.Text = teamInfo.AssistantCoach;
+                    Wins.Text = teamInfo.Wins.ToString();
+                    Losses.Text = teamInfo.Losses.ToString();
                 }
                 catch (Exception ex)
                 {
