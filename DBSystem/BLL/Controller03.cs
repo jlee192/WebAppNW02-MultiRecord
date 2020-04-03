@@ -10,7 +10,7 @@ using DBSystem.ENTITIES;
 
 namespace DBSystem.BLL
 {
-    public class Controller03 //Supplier
+    public class Controller03 // Guardians
     {
         public List<Entity03> List()
         {

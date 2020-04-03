@@ -19,13 +19,13 @@ namespace DBSystem.ENTITIES
         public int EmergencyPhoneNumber { get; set; }
         public string EmailAddress { get; set; }
 
-        //[NotMapped]
-        //public string CompanyAddress
-        //{
-        //    get
-        //    {
-        //        return Address + " " + City + " " + PostalCode;
-        //    }
-        //}
+        [NotMapped]
+        public string GuardianName
+        {
+            get
+            {
+                return LastName + ", " + FirstName;
+            }
+        }
     }
 }
