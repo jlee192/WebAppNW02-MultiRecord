@@ -125,6 +125,8 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site.css" />
     <Content Include="Default.aspx" />
+    <Content Include="ExercisePages\08MultiRecordDropdownToSingleRecord.aspx" />
+    <Content Include="ExercisePages\CRUDPage.aspx" />
     <Content Include="ExercisePages\ReceivingPage.aspx" />
     <Content Include="ExercisePages\MultiRecordQueryWithCustomGridView.aspx" />
     <Content Include="ExercisePages\MultiRecordQueryWithDefaultGridView.aspx" />
@@ -297,6 +299,20 @@
     </Compile>
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ExercisePages\08MultiRecordDropdownToSingleRecord.aspx.cs">
+      <DependentUpon>08MultiRecordDropdownToSingleRecord.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ExercisePages\08MultiRecordDropdownToSingleRecord.aspx.designer.cs">
+      <DependentUpon>08MultiRecordDropdownToSingleRecord.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ExercisePages\CRUDPage.aspx.cs">
+      <DependentUpon>CRUDPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ExercisePages\CRUDPage.aspx.designer.cs">
+      <DependentUpon>CRUDPage.aspx</DependentUpon>
     </Compile>
     <Compile Include="ExercisePages\ReceivingPage.aspx.cs">
       <DependentUpon>ReceivingPage.aspx</DependentUpon>

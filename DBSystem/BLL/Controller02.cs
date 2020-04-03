@@ -12,6 +12,13 @@ namespace DBSystem.BLL
 {
     public class Controller02 //Product
     {
+        public List<Entity02> List()
+        {
+            using (var context = new Context())
+            {
+                return context.Entity02s.ToList();
+            }
+        }
         public List<Entity02> FindByID(int id)
         {
             using (var context = new Context())

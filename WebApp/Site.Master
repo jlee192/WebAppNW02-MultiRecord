@@ -42,7 +42,7 @@
             <div class="navbar navbar-inverse">
                 <nav class="navbar navbar-expand-md navbar-light fixed-top">
                     <a class="navbar-brand" href="Default.aspx" runat="server">
-                            <strong>Bootstrap 4+</strong>
+                            <strong>Jack Lee</strong>
                     </a>
                     <button class="navbar-toggler" type="button"
                             data-toggle="collapse" data-target="#navbarMenuName"
@@ -70,6 +70,11 @@
                                             href="~/ExercisePages/MultiRecordQueryWithCustomGridView.aspx"
                                             style="color:black" runat="server">
                                             Multi Record Query with Custom GridView
+                                    </a>
+                                    <a class="dropdown-item"
+                                            href="~/ExercisePages/08MultiRecordDropdownToSingleRecord.aspx"
+                                            style="color:black" runat="server">
+                                            04-Multi Record Query Dropdown to Single Record via Page Navigation (Ex09,10)
                                     </a>
                                     
                                 </div>
