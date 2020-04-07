@@ -162,11 +162,19 @@ namespace WebApp.ExercisePages
             {
                 errormsgs.Add("Age is required");
             }
-            else 
+            else
             {
-                if (int.Parse(Age.Text) < 6 || int.Parse(Age.Text) > 14)
+                int age;
+                if (int.TryParse(Age.Text, out age))
                 {
-                    errormsgs.Add("Age must be between 6 and 14 inclusive");
+                    if (age < 6 || age > 14)
+                    {
+                        errormsgs.Add("Age must be between 6 and 14 inclusive");
+                    }
+                }
+                else
+                {
+                    errormsgs.Add("Age must be a real number");
                 }
             }
             // Gender validation:
@@ -196,16 +204,27 @@ namespace WebApp.ExercisePages
             }
             else
             {
-                if (AlbertaHealthCareNumber.Text.Length > 10)
+                int numbers;
+                // Get the first character of the numbers
+                string firstDigit = AlbertaHealthCareNumber.Text.Substring(0, 1); 
+                if (int.TryParse(AlbertaHealthCareNumber.Text, out numbers))
                 {
-                    errormsgs.Add("Alberta Health Care Numbers are limited to 10 digits");
+                    if (numbers <= 0 || int.Parse(firstDigit) < 1)
+                    {
+                        errormsgs.Add("Alberta Health Care Number must start with 1-9 inclusive");
+                    }
+                    else
+                    {
+                        if (AlbertaHealthCareNumber.Text.Length != 10)
+                        {
+                            errormsgs.Add("Alberta Health Care Number must be 10 digits");
+                        }
+                    }
                 }
-                else if (AlbertaHealthCareNumber.Text.Length < 10 && AlbertaHealthCareNumber.Text.Length > 0)
+                else
                 {
-                    errormsgs.Add("Alberta Health Care Numbers are missing digit(s)");
+                    errormsgs.Add("Invalid Alberta Health Care Number");
                 }
-                // need more validation
-                // First digit starts with 1-9
             }
             // Medical Alert Details Validation:
             if (MedicalAlertDetails.Text.Length > 250)
