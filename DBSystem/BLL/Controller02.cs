@@ -36,16 +36,6 @@ namespace DBSystem.BLL
                 return results.ToList();
             }
         }
-        //public List<Entity02> FindByPartialName(string partialname)
-        //{
-        //    using (var context = new Context())
-        //    {
-        //        IEnumerable<Entity02> results =
-        //            context.Database.SqlQuery<Entity02>("Products_GetByPartialProductName @PartialName",
-        //                 new SqlParameter("PartialName", partialname));
-        //        return results.ToList();
-        //    }
-        //}
         public int Add(Entity02 item)
         {
             using (var context = new Context())
@@ -63,16 +53,6 @@ namespace DBSystem.BLL
                 return context.SaveChanges();
             }
         }
-        //public int Discontinue(int productid)
-        //{
-        //    using (var context = new Context())
-        //    {
-        //        var existing = context.Entity02s.Find(productid);
-        //        existing.Discontinued = true;
-        //        context.Entry(existing).State = System.Data.Entity.EntityState.Modified;
-        //        return context.SaveChanges();
-        //    }
-        //}
         public int Delete(int productid)
         {
             using (var context = new Context())

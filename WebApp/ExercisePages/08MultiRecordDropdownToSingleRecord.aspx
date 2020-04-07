@@ -2,9 +2,9 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <h1> Multi Record Query Dropdown to Single Record via Page Navigation (EX09,10)</h1>
     <div class="offset-2">
-        <asp:Label ID="Label1" runat="server" Text="Select a player "></asp:Label>&nbsp;&nbsp;   
+        <asp:Label ID="Label1" runat="server" Text="Select a Player"></asp:Label>&nbsp;&nbsp;   
         <asp:DropDownList ID="List01" runat="server"></asp:DropDownList>&nbsp;&nbsp;
-        <asp:Button ID="ButtonFetch" runat="server" Text="Update/Discontinue/Delete" 
+        <asp:Button ID="ButtonFetch" runat="server" Text="Edit" 
              CausesValidation="false" OnClick="Fetch_Click"/>
         <asp:Button ID="ButtonAdd" runat="server" Text="Add" 
              CausesValidation="false" OnClick="Add_Click"/>

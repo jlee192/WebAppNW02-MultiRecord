@@ -43,7 +43,7 @@ namespace WebApp.ExercisePages
         {
             if (List01.SelectedIndex == 0)
             {
-                MessageLabel1.Text = "Select a player";
+                MessageLabel1.Text = "Please select a player";
             }
             else
             {

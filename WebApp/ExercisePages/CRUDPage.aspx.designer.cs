@@ -33,13 +33,13 @@ namespace WebApp.ExercisePages
         protected global::System.Web.UI.WebControls.Label Label1;
 
         /// <summary>
-        /// PlayerID control.
+        /// ID control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox PlayerID;
+        protected global::System.Web.UI.WebControls.TextBox ID;
 
         /// <summary>
         /// Label2 control.
@@ -87,6 +87,24 @@ namespace WebApp.ExercisePages
         protected global::System.Web.UI.WebControls.Label Label6;
 
         /// <summary>
+        /// GuardianList control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList GuardianList;
+
+        /// <summary>
+        /// Label7 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label7;
+
+        /// <summary>
         /// TeamList control.
         /// </summary>
         /// <remarks>
@@ -123,6 +141,24 @@ namespace WebApp.ExercisePages
         protected global::System.Web.UI.WebControls.Label Label4;
 
         /// <summary>
+        /// Gender control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox Gender;
+
+        /// <summary>
+        /// Label8 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label8;
+
+        /// <summary>
         /// AlbertaHealthCareNumber control.
         /// </summary>
         /// <remarks>
@@ -130,6 +166,24 @@ namespace WebApp.ExercisePages
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox AlbertaHealthCareNumber;
+
+        /// <summary>
+        /// Label9 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label9;
+
+        /// <summary>
+        /// MedicalAlertDetails control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox MedicalAlertDetails;
 
         /// <summary>
         /// BackButton control.
