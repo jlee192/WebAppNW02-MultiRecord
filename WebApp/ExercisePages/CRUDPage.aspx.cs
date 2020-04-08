@@ -58,7 +58,7 @@ namespace WebApp.ExercisePages
                         GuardianList.SelectedValue = info.GuardianID.ToString();
                         TeamList.SelectedValue = info.TeamID.ToString();
                         Age.Text = info.Age.ToString();
-                        Gender.Text = info.Gender;
+                        Gender.Text = info.Gender.ToUpper();
                         AlbertaHealthCareNumber.Text = info.AlbertaHealthCareNumber;
                         MedicalAlertDetails.Text =
                             info.MedicalAlertDetails == null ? "" : info.MedicalAlertDetails;
@@ -155,7 +155,7 @@ namespace WebApp.ExercisePages
             // Team validation:
             if (TeamList.SelectedIndex == 0)
             {
-                errormsgs.Add("Guardian is required");
+                errormsgs.Add("Team is required");
             }
             // Age validation: 
             if (string.IsNullOrEmpty(Age.Text))
@@ -273,7 +273,7 @@ namespace WebApp.ExercisePages
                     player.GuardianID = int.Parse(GuardianList.SelectedValue);
                     player.TeamID = int.Parse(TeamList.SelectedValue);
                     player.Age = int.Parse(Age.Text);
-                    player.Gender = Gender.Text;
+                    player.Gender = Gender.Text.ToUpper();
                     player.AlbertaHealthCareNumber = AlbertaHealthCareNumber.Text;
                     if (string.IsNullOrEmpty(MedicalAlertDetails.Text))
                     {
@@ -324,7 +324,7 @@ namespace WebApp.ExercisePages
                     player.GuardianID = int.Parse(GuardianList.SelectedValue);
                     player.TeamID = int.Parse(TeamList.SelectedValue);
                     player.Age = int.Parse(Age.Text);
-                    player.Gender = Gender.Text;
+                    player.Gender = Gender.Text.ToUpper();
                     player.AlbertaHealthCareNumber = AlbertaHealthCareNumber.Text;
                     if (string.IsNullOrEmpty(MedicalAlertDetails.Text))
                     {
