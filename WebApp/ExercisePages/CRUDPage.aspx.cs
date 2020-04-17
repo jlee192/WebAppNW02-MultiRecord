@@ -19,7 +19,7 @@ namespace WebApp.ExercisePages
         static string pid = "";
         static string add = "";
         List<string> errormsgs = new List<string>();
-        private static List<Entity02> Entity02List = new List<Entity02>();
+        //private static List<Entity02> Entity02List = new List<Entity02>();
         protected void Page_Load(object sender, EventArgs e)
         {
             Message.DataSource = null;
@@ -35,11 +35,11 @@ namespace WebApp.ExercisePages
                 {
                     Response.Redirect("~/Default.aspx");
                 }
-                else if (add == "yes")
-                {
-                    //Discontinued.Enabled = false;
-                }
-                else
+                //else if (add == "yes")
+                //{
+                //    //Discontinued.Enabled = false;
+                //}
+                else if (add == "no")
                 {
                     Controller02 sysmgr = new Controller02();
                     Entity02 info = null;
@@ -206,7 +206,7 @@ namespace WebApp.ExercisePages
             {
                 int numbers;
                 // Get the first character of the numbers
-                string firstDigit = AlbertaHealthCareNumber.Text.Substring(0, 1); 
+                string firstDigit = AlbertaHealthCareNumber.Text.Substring(0, 1);
                 if (int.TryParse(AlbertaHealthCareNumber.Text, out numbers))
                 {
                     if (numbers <= 0 || int.Parse(firstDigit) < 1)
